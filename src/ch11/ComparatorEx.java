@@ -2,7 +2,9 @@ package ch11;
 
 import java.util.Arrays;
 import java.util.Comparator;
-
+/* Comparable: 기본정렬 기준을 구현하는데 사용됨
+ * Comparator: 기본정렬 기준외에 다른 기준으로 정렬하고자 할 때 사용
+ * */
 public class ComparatorEx {
 
 	public static void main(String[] args) {
@@ -23,6 +25,7 @@ class Descending implements Comparator{
 
 	@Override
 	public int compare(Object o1, Object o2) {
+		//매개변수가 Object타입이기 때문에 compareTo()를 바로 호출X, 먼저 형변환 필요
 		if(o1 instanceof Comparable && o2 instanceof Comparable) {
 			Comparable c1 = (Comparable)o1;
 			Comparable c2 = (Comparable)o2;
