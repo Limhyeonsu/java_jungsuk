@@ -6,6 +6,7 @@ public class ThreadEx8 {
 		ThreadEx8_1 th1 = new ThreadEx8_1();
 		ThreadEx8_2 th2 = new ThreadEx8_2();
 		//setPriority()를 통해 우선순위 변경
+		//우선순위 변경은 start()를 호출 하기전에 해야한다!
 		th2.setPriority(7);
 		
 		System.out.println("Priority of th1(-) : "+th1.getPriority());
