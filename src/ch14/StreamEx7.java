@@ -63,7 +63,7 @@ public class StreamEx7 {
 		System.out.printf("1. 단순분할(성별로 분할)%n");
 		Map<Boolean, List<Student3>> stuBySex = Stream.of(stuArr)
 				.collect(Collectors.partitioningBy(Student3::isMale));
-		
+		System.out.println(stuBySex); //{false=[[김지미, 여, 1학년1반, 250점], ...true=[[나자바, 남, 1학년 1반, 300점]...}
 		List<Student3> maleStudent = stuBySex.get(true);
 		List<Student3> femaleStudent = stuBySex.get(false);
 		
